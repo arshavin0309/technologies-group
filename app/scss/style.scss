@@ -3,7 +3,10 @@
 @import '../scss/keyframes';
 
 :root {
-    
+    --grey: #22282C;
+    --yellow: #FFE600;
+    --black: #161A1E;
+    --white: #FFFFFF;
 }
 
 * {
@@ -11,9 +14,10 @@
     margin: 0;
     padding: 0;
     font-family: 'Manrope', sans-serif;
+    color: var(--white);
 
     scrollbar-width: thin;
-    scrollbar-color: var(--violet) var(--body-bg);
+    scrollbar-color: var(--yellow) var(--grey);
 
     &::-webkit-scrollbar {
         height: 12px;
@@ -21,13 +25,106 @@
     }
 
     &::-webkit-scrollbar-track {
-        background: var(--body-bg);
+        background: var(--grey);
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: var(--violet);
         border-radius: 5px;
-        border: 3px solid var(--body-bg);
+        border: 3px solid var(--grey);
+    }
+}
+
+body {
+    background: var(--grey);
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 87.42px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 65.57px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32.78px;
+}
+
+.text,
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    color: #0D0F11;
+    background: var(--yellow);
+    border: none;
+    cursor: pointer;
+    
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 21.86px;
+}
+
+.container {
+    max-width: 1275px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+}
+
+section {
+    margin-top: 240px;
+    margin-bottom: 240px;
+
+    &:first-child {
+        margin-top: 330px;
+    }
+}
+
+.header {
+    .container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 203px;
+        height: 37px;
+        background: url(../images/header-logo.svg) center / contain no-repeat;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 40px;
+    }
+
+    .menu {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        list-style: none;
+
+        &>.menu-item {
+            white-space: nowrap;
+
+            &>a {
+                text-decoration: none;
+            }
+        }
     }
 }
 
