@@ -14,14 +14,14 @@ if (document.location.pathname === '/about.html') { document.title = 'О Patronu
 if (document.location.pathname === '/contacts.html') { document.title = 'Контакты' };
 
 $(document).ready(function () {
-    $('.faq-list > li > .answer').hide();
+    $('.faq__list > li > .answer').hide();
 
-    $('.faq-list > li').click(function () {
+    $('.faq__list > li').click(function () {
         if ($(this).hasClass("active")) {
             $(this).removeClass("active").find(".answer").slideUp();
         } else {
-            $(".faq-list > li.active .answer").slideUp();
-            $(".faq-list > li.active").removeClass("active");
+            $(".faq__list > li.active .answer").slideUp();
+            $(".faq__list > li.active").removeClass("active");
             $(this).addClass("active").find(".answer").slideDown();
         }
         return false;
