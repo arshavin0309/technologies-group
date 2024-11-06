@@ -12,3 +12,18 @@ if (document.location.pathname === '/stocks.html') { document.title = 'Акци�
 if (document.location.pathname === '/indexes.html') { document.title = 'Индексы' };
 if (document.location.pathname === '/about.html') { document.title = 'О Patronus Investments' };
 if (document.location.pathname === '/contacts.html') { document.title = 'Контакты' };
+
+$(document).ready(function () {
+    $('.faq-list > li > .answer').hide();
+
+    $('.faq-list > li').click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".answer").slideUp();
+        } else {
+            $(".faq-list > li.active .answer").slideUp();
+            $(".faq-list > li.active").removeClass("active");
+            $(this).addClass("active").find(".answer").slideDown();
+        }
+        return false;
+    });
+});
