@@ -13,8 +13,16 @@
         transform: rotate(0);
     }
 
-    40% {
-        transform: rotate(-50deg);
+    20% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    70% {
+        transform: rotate(150deg);
     }
 
     100% {
