@@ -727,7 +727,19 @@ section {
             height: 825px;
             background: url(../images/body-bg.svg) center / contain no-repeat;
         }
+
+        &::after {
+            z-index: -2;
+            position: absolute;
+            content: '';
+            bottom: -430px;
+            left: -300px;
+            width: 615px;
+            height: 825px;
+            background: url(../images/body-bg.svg) center / contain no-repeat;
+        }
     }
+
     h2 {
         &+p {
             max-width: 725px;
