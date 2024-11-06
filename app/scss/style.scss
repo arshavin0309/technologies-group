@@ -117,7 +117,7 @@ section {
     }
 
     &:first-child {
-        margin-top: 270px;
+        margin-top: 200px;
         margin-bottom: 170px;
     }
 }
@@ -191,7 +191,7 @@ section {
             top: -60px;
             left: -180px;
             width: 435px;
-            height: 585px;
+            height: 100%;
             background: url(../images/body-bg.svg) center / contain no-repeat;
         }
     }
@@ -201,6 +201,7 @@ section {
         height: 50px;
         background: url(../images/header-logo.svg) center / contain no-repeat;
         flex: 0 0 auto;
+        cursor: pointer;
     }
 
     &__nav {

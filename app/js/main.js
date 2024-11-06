@@ -29,7 +29,9 @@ $(document).ready(function () {
 });
 
 let goTopBtn = document.querySelector('.header__logo');
+let goTopBtn2 = document.querySelector('.footer__logo');
 goTopBtn.addEventListener('click', backToTop);
+goTopBtn2.addEventListener('click', backToTop);
 
 function backToTop() {
     window.scrollTo({
