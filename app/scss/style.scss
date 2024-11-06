@@ -147,6 +147,7 @@ section {
         height: 37px;
         background: url(../images/header-logo.svg) center / contain no-repeat;
         flex: 0 0 auto;
+        cursor: pointer;
     }
 
     &__nav {
@@ -179,8 +180,20 @@ section {
     background: var(--black);
 
     .container {
+        position: relative;
         padding-top: 70px;
         padding-bottom: 40px;
+
+        &::before {
+            z-index: -2;
+            position: absolute;
+            content: '';
+            top: -60px;
+            left: -180px;
+            width: 435px;
+            height: 585px;
+            background: url(../images/body-bg.svg) center / contain no-repeat;
+        }
     }
 
     &__logo {
@@ -276,6 +289,13 @@ section {
 }
 
 .advantages {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: calc(-50px - 90px);
+        padding-top: calc(50px + 90px);
+    }
+
     .container {
         &::before {
             z-index: -1;
@@ -307,8 +327,9 @@ section {
         box-shadow: -5px -5px 250px 0px #FFFFFF05 inset;
         border-radius: 8px;
         overflow: hidden;
-
         outline: 2px solid #ffffff57;
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
     }
 
     p {
@@ -376,8 +397,10 @@ section {
         box-shadow: -5px -5px 250px 0px #FFFFFF05 inset;
         border-radius: 8px;
         overflow: hidden;
-
         outline: 2px solid #ffffff57;
+
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
 
         &:nth-child(1) {
             h3 {
@@ -411,6 +434,13 @@ section {
 }
 
 .platform {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: calc(-50px - 90px);
+        padding-top: calc(50px + 90px);
+    }
+
     .container {
         &::before {
             z-index: -1;
@@ -434,6 +464,7 @@ section {
     }
 
     &__item {
+        position: relative;
         height: 365px;
         display: flex;
         align-items: start;
@@ -447,10 +478,24 @@ section {
 
         outline: 2px solid #ffffff57;
 
+        background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
+
         &:nth-child(1) {
-            background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), image-set(url(../images/platform-image-1.avif),
+            &::before {
+                position: absolute;
+                content: '';
+                right: 0;
+                bottom: 0;
+                width: 289px;
+                height: 271px;
+                background: image-set(
+                    url(../images/platform-image-1.avif),
                     url(../images/platform-image-1.webp),
-                    url(../images/platform-image-1.png)) right bottom / 289px 271px no-repeat;
+                    url(../images/platform-image-1.png)
+                ) center / contain no-repeat;
+            }
 
             .platform__icon {
                 background: var(--yellow) url(../images/platform-icon-1.svg) center / 24px no-repeat;
@@ -458,9 +503,19 @@ section {
         }
 
         &:nth-child(2) {
-            background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), image-set(url(../images/platform-image-2.avif),
+            &::before {
+                position: absolute;
+                content: '';
+                right: 0;
+                bottom: 0;
+                width: 314px;
+                height: 311px;
+                background: image-set(
+                    url(../images/platform-image-2.avif),
                     url(../images/platform-image-2.webp),
-                    url(../images/platform-image-2.png)) right bottom / 314px 311px no-repeat;
+                    url(../images/platform-image-2.png)
+                ) center / contain no-repeat;
+            }
 
             .platform__icon {
                 background: var(--yellow) url(../images/platform-icon-2.svg) center / 24px no-repeat;
@@ -519,6 +574,9 @@ section {
 
         outline: 2px solid #ffffff57;
 
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
+
         &:nth-child(1) {
             .feature__icon {
                 background: var(--yellow) url(../images/feature-icon-1.svg) center / 24px no-repeat;
@@ -557,6 +615,13 @@ section {
 }
 
 .select {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: calc(-50px - 90px);
+        padding-top: calc(50px + 90px);
+    }
+
     .container {
         &::before {
             z-index: -1;
@@ -588,6 +653,9 @@ section {
         overflow: hidden;
 
         outline: 2px solid #ffffff57;
+
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
     }
 
     &__title {
@@ -679,6 +747,9 @@ section {
                 outline: 2px solid #ffffff57;
                 cursor: pointer;
 
+                background-size: 200% 200%;
+                animation: gradient 3s ease infinite;
+
                 &::after {
                     content: '';
                     width: 33px;
@@ -716,6 +787,13 @@ section {
 }
 
 .analitycs {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: calc(-50px - 90px);
+        padding-top: calc(50px + 90px);
+    }
+
     .container {
         &::before {
             z-index: -2;
@@ -761,6 +839,9 @@ section {
         overflow: hidden;
         background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
         outline: 2px solid #ffffff57;
+
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
     }
 
     &__item {
@@ -789,6 +870,13 @@ section {
 }
 
 .contacts {
+    &::before {
+        content: '';
+        display: block;
+        margin-top: calc(-50px - 90px);
+        padding-top: calc(50px + 90px);
+    }
+
     .container {
         &::before {
             z-index: -1;
@@ -804,6 +892,7 @@ section {
             animation: jump 4s linear alternate infinite;
         }
     }
+
     &__list {
         display: grid;
         gap: 30px;
@@ -822,6 +911,9 @@ section {
         overflow: hidden;
         background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
         outline: 2px solid #ffffff57;
+
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
 
         &:nth-child(1) {
             h3 {
@@ -916,6 +1008,27 @@ section {
             color: var(--white);
             opacity: 0.6;
         }
+    }
+}
+
+.upButton {
+    z-index: 1000;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 15px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    transform: scale(0);
+    pointer-events: none;
+    background: var(--yellow) url(../images/up-btn.svg) center / 20px no-repeat;
+    border-radius: 50%;
+
+    &.show {
+        transition: all 1s ease;
+        transform: scale(1);
+        pointer-events: all;
     }
 }
 

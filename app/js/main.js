@@ -27,3 +27,55 @@ $(document).ready(function () {
         return false;
     });
 });
+
+let goTopBtn = document.querySelector('.header__logo');
+goTopBtn.addEventListener('click', backToTop);
+
+function backToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+
+// плавная прокрутка до якоря
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const blockID = anchor.getAttribute('href').substr(1)
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
+
+// кнопка вверх
+document.addEventListener('DOMContentLoaded', () => {
+    let goTopBtn = document.querySelector('.upButton');
+
+    window.addEventListener('scroll', trackScroll);
+    goTopBtn.addEventListener('click', backToTop);
+
+    function trackScroll() {
+        let scrolled = window.pageYOffset;
+
+        if (scrolled > 100) {
+            goTopBtn.classList.add('show');
+        }
+        if (scrolled < 100) {
+            goTopBtn.classList.remove('show');
+        }
+    }
+
+    function backToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+})
