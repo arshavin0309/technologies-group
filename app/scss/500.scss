@@ -83,6 +83,19 @@
                 animation: none;
                 filter: blur(100px);
             }
+
+            &::after {
+                z-index: -1;
+                position: absolute;
+                content: '';
+                width: 340px;
+                height: 470px;
+                bottom: -230px;
+                top: auto;
+                left: -115px;
+                right: auto;
+                background: url(../images/body-bg.svg) center / contain no-repeat;
+            }
         }
 
         &__item {
@@ -157,7 +170,13 @@
     .contacts {
         .container {
             &::before {
-                display: none;
+                width: 340px;
+                height: 470px;
+                top: -20px;
+                left: -115px;
+                right: auto;
+                bottom: auto;
+                background: url(../images/body-bg.svg) center / contain no-repeat;
                 animation: none;
             }
         }
@@ -246,7 +265,12 @@
             }
 
             &::after {
-                display: none;
+                width: 340px;
+                height: 470px;
+                bottom: -150px;
+                top: auto;
+                right: -120px;
+                left: auto;
             }
         }
     }
