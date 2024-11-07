@@ -301,6 +301,10 @@ section {
 
     p {
         color: var(--white-opacity-60);
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -783,6 +787,14 @@ section {
         list-style: none;
 
         &>li {
+            &.active {
+                &>h3 {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
             &>h3 {
                 width: 100%;
                 display: flex;
@@ -807,6 +819,7 @@ section {
                     width: 33px;
                     height: 33px;
                     flex: 0 0 auto;
+                    transition: var(--transition);
                     background: url(../images/arrow.svg) center / contain no-repeat;
                 }
             }
@@ -844,6 +857,10 @@ section {
         display: block;
         margin-top: calc(-100px - 90px);
         padding-top: calc(100px + 90px);
+    }
+
+    h2 {
+        margin-bottom: 25px;
     }
 
     .container {
