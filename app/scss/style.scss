@@ -107,6 +107,10 @@ p {
         text-decoration: none;
         cursor: pointer;
     }
+
+    &.mobile {
+        display: none;
+    }
 }
 
 .container {
@@ -234,7 +238,7 @@ section {
         transition: var(--transition);
         transform: scaley(0) translateY(-50%);
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
     }
 }
 
@@ -400,7 +404,7 @@ section {
         overflow: hidden;
         outline: 2px solid #ffffff57;
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
     }
 
     p {
@@ -472,7 +476,7 @@ section {
         outline: 2px solid #ffffff57;
 
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
 
         &:nth-child(1) {
             h3 {
@@ -552,7 +556,7 @@ section {
 
         background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
 
         &:nth-child(1) {
             &::before {
@@ -643,7 +647,7 @@ section {
         outline: 2px solid #ffffff57;
 
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
 
         &:nth-child(1) {
             .feature__icon {
@@ -723,7 +727,7 @@ section {
         outline: 2px solid #ffffff57;
 
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
     }
 
     &__title {
@@ -824,7 +828,7 @@ section {
                 cursor: pointer;
 
                 background-size: 200% 200%;
-                animation: gradient 3s ease infinite;
+                animation: gradient 3s ease-in-out infinite;
 
                 &::after {
                     content: '';
@@ -922,7 +926,7 @@ section {
         outline: 2px solid #ffffff57;
 
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
     }
 
     &__item {
@@ -994,7 +998,7 @@ section {
         outline: 2px solid #ffffff57;
 
         background-size: 200% 200%;
-        animation: gradient 3s ease infinite;
+        animation: gradient 3s ease-in-out infinite;
 
         &:nth-child(1) {
             h3 {
@@ -1108,7 +1112,7 @@ section {
     border-radius: 50%;
 
     &.show {
-        transition: all 1s ease;
+        transition: all 1s ease-in-out;
         transform: scale(1);
         pointer-events: all;
     }

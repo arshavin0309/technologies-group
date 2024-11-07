@@ -24,6 +24,30 @@
     .hero {
         .container {
             grid-template-columns: 1fr;
+
+            &::before {
+                width: 340px;
+                height: 470px;
+                bottom: -80px;
+                left: -40px;
+                top: auto;
+                right: auto;
+            }
+
+            &::after {
+                z-index: -1;
+                position: absolute;
+                content: "";
+                width: 350px;
+                height: 350px;
+                background: var(--yellow);
+                bottom: -160px;
+                right: -125px;
+                opacity: 0.3;
+                border-radius: 50%;
+                filter: blur(100px);
+                animation: jump 4s linear alternate infinite;
+            }
         }
 
         &__image {
@@ -72,6 +96,16 @@
             margin-right: -15px;
             border-radius: 0;
             outline: none;
+        }
+    }
+
+    .header {
+        &__lang {
+            width: 100%;
+        }
+
+        &__active {
+            justify-content: center;
         }
     }
 }

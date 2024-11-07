@@ -18,6 +18,24 @@
         padding-right: 15px;
     }
 
+    .contacts {
+        &::before {
+            content: "";
+            display: block;
+            margin-top: -100px;
+            padding-top: 100px;
+        }
+    }
+
+    .select {
+        &::before {
+            content: "";
+            display: block;
+            margin-top: -100px;
+            padding-top: 100px;
+        }
+    }
+
     .header {
         height: 70px;
 
@@ -29,7 +47,9 @@
             height: calc(100vh - 70px);
             display: flex;
             flex-direction: column;
-            padding: 25px 15px;
+            align-items: start;
+            gap: 30px;
+            padding: 35px 15px;
             background: var(--grey);
             transition: var(--transition);
             transform: translateX(100%);
@@ -47,6 +67,30 @@
 
         .btn {
             display: none;
+
+            &.mobile {
+                display: inline-block;
+                padding: 15px 40px;
+            }
+        }
+
+        &__active {
+            display: flex;
+            gap: 20px;
+        }
+
+        &__arrow {
+            display: none;
+        }
+
+        &__select {
+            position: initial;
+            padding: 0;
+            opacity: 1;
+            transform: none;
+            outline: none;
+            border-radius: 0;
+            background: none;
         }
 
         &__burger {
@@ -78,6 +122,13 @@
     }
 
     .advantages {
+        &::before {
+            content: "";
+            display: block;
+            margin-top: -100px;
+            padding-top: 100px;
+        }
+
         &__list {
             gap: 25px;
         }
@@ -91,6 +142,13 @@
     }
 
     .platform {
+        &::before {
+            content: "";
+            display: block;
+            margin-top: -100px;
+            padding-top: 100px;
+        }
+
         &__list {
             gap: 25px;
         }
@@ -110,6 +168,15 @@
         &__list {
             gap: 25px;
             grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .analitycs {
+        &::before {
+            content: "";
+            display: block;
+            margin-top: -100px;
+            padding-top: 100px;
         }
     }
 
