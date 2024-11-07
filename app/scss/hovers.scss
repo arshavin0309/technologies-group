@@ -37,6 +37,11 @@
                 .header__arrow {
                     transform: rotate(180deg);
                 }
+
+                .header__select {
+                    opacity: 1;
+                    transform: none;
+                }
             }
         }
     }
