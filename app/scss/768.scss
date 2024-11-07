@@ -1,3 +1,45 @@
 @media (max-width: 768px) {
-    
+    .platform {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            &:nth-child(1) {
+                &::before {
+                    width: 289px;
+                    height: 271px;
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    width: 314px;
+                    height: 311px;
+                }
+            }
+        }
+    }
+
+    .analitycs {
+        h2 {
+            margin-bottom: 15px;
+
+            &+p {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__list {
+            grid-template-columns: 100%;
+            padding: 10px 15px;
+            gap: 10px;
+        }
+
+        &__item {
+            &:nth-child(3) {
+                grid-column: initial;
+            }
+        }
+    }
 }

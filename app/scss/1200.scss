@@ -1,3 +1,99 @@
 @media (max-width: 1200px) {
-    
+    section {
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        &:first-child {
+            margin-top: 130px;
+            margin-bottom: 200px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header {
+        height: 70px;
+
+        &__nav {
+            display: none;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        &__burger {
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url(../images/burger.svg) center / contain no-repeat;
+            border: none;
+        }
+    }
+
+    .hero {
+        .container {
+            grid-template-columns: 2fr 1fr;
+            align-items: start;
+        }
+
+        &__image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .advantages {
+        &__list {
+            gap: 25px;
+        }
+    }
+
+    .instructions {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+    }
+
+    .platform {
+        &__list {
+            gap: 25px;
+        }
+
+        &__item {
+            height: 455px;
+            justify-content: start;
+            gap: 20px;
+        }
+
+        p {
+            max-width: 100%;
+        }
+    }
+
+    .feature {
+        &__list {
+            gap: 25px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .faq {
+        &__list {
+            &>li {
+                &>h3 {
+                    padding: 15px 25px;
+                }
+            }
+        }
+    }
 }

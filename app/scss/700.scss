@@ -1,3 +1,13 @@
 @media (max-width: 700px) {
-    
+    .select {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            &:nth-child(3) {
+                grid-column: initial;
+            }
+        }
+    }
 }
