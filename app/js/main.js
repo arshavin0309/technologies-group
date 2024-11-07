@@ -81,3 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })
+
+$('.header__burger').on('click', () => {
+    $('.header__burger').toggleClass('open')
+    $('.header__nav').toggleClass('open')
+})
+
+$('.header .menu > .menu-item > a').on('click', () => {
+    $('.header__burger').removeClass('open')
+    $('.header__nav').removeClass('open')
+})

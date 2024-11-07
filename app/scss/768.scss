@@ -42,4 +42,11 @@
             }
         }
     }
+
+    .contacts {
+        &__list {
+            gap: 20px;
+            grid-template-columns: 1fr;
+        }
+    }
 }

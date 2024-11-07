@@ -22,7 +22,27 @@
         height: 70px;
 
         &__nav {
-            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px;
+            background: var(--grey);
+            transition: var(--transition);
+            transform: translateX(100%);
+
+            &.open {
+                transform: none;
+            }
+        }
+
+        .menu {
+            flex-direction: column;
+            gap: 20px;
+            align-items: start;
         }
 
         .btn {
@@ -35,6 +55,12 @@
             height: 25px;
             background: url(../images/burger.svg) center / contain no-repeat;
             border: none;
+            transition: var(--transition);
+
+            &.open {
+                transform: rotate(-360deg);
+                background: url(../images/close.svg) center / 20px no-repeat;
+            }
         }
     }
 
