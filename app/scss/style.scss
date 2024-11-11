@@ -1034,7 +1034,17 @@ section {
     }
 }
 
-.form {
+.wpcf7-spinner {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+}
+
+.wpcf7-not-valid-tip {
+    margin-bottom: 20px;
+}
+
+form {
     p {
         line-height: initial;
     }
@@ -1073,6 +1083,7 @@ section {
             font-weight: 800;
             line-height: 21.86px;
             transition: var(--transition);
+            font-family: "Manrope", sans-serif;
             border: none;
             cursor: pointer;
         }
