@@ -1045,7 +1045,11 @@ section {
 }
 
 .wpcf7-not-valid-tip {
-    margin-bottom: 20px;
+    transform: translateY(-15px);
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
 }
 
 form {
