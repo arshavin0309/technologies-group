@@ -58,13 +58,13 @@ function deleteClass() {
 }
 
 $('.header__burger').on('click', () => {
-    $('.header__burger').toggleClass('open')
-    $('.header__nav').toggleClass('open')
-})
+    $('.header__burger').toggleClass('open');
+    $('.header__nav').toggleClass('open');
+});
 
-$('.header .menu > .menu-item > a').on('click', deleteClass)
-$('.header__logo').on('click', deleteClass)
-$('.upButton').on('click', deleteClass)
+$('.header .menu > .menu-item > a').on('click', deleteClass);
+$('.header__logo').on('click', deleteClass);
+$('.upButton').on('click', deleteClass);
 
 $('body').hide();
 $('body').fadeIn(1000);
