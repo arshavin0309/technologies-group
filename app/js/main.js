@@ -53,8 +53,8 @@ function trackScroll() {
 }
 
 function deleteClass() {
-    $('.header__burger').removeClass('open')
-    $('.header__nav').removeClass('open')
+    $('.header__burger').removeClass('open');
+    $('.header__nav').removeClass('open');
 }
 
 $('.header__burger').on('click', () => {
