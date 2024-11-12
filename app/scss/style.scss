@@ -1001,6 +1001,10 @@ section {
         background-size: 200% 200%;
         animation: gradient 3s ease-in-out infinite;
 
+        a {
+            transition: var(--transition);
+        }
+
         &:nth-child(1) {
             h3 {
                 max-width: 500px;

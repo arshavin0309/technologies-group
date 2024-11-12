@@ -11,6 +11,16 @@
         }
     }
 
+    .contacts {
+        &__item {
+            a {
+                &:hover {
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+
     form {
         input {
             &[type="submit"] {
